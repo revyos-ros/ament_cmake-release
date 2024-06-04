@@ -1,3 +1,49 @@
+## ament_cmake (humble) - 1.3.9-1
+
+The packages in the `ament_cmake` repository were released into the `humble` distro by running `/home/z572/gits/revyos-ros/venv/bin/bloom-release -r humble ament_cmake` on `Tue, 04 Jun 2024 06:13:00 -0000`
+
+These packages were released:
+- `ament_cmake`
+- `ament_cmake_auto`
+- `ament_cmake_core`
+- `ament_cmake_export_definitions`
+- `ament_cmake_export_dependencies`
+- `ament_cmake_export_include_directories`
+- `ament_cmake_export_interfaces`
+- `ament_cmake_export_libraries`
+- `ament_cmake_export_link_flags`
+- `ament_cmake_export_targets`
+- `ament_cmake_gen_version_h`
+- `ament_cmake_gmock`
+- `ament_cmake_google_benchmark`
+- `ament_cmake_gtest`
+- `ament_cmake_include_directories`
+- `ament_cmake_libraries`
+- `ament_cmake_nose`
+- `ament_cmake_pytest`
+- `ament_cmake_python`
+- `ament_cmake_target_dependencies`
+- `ament_cmake_test`
+- `ament_cmake_vendor_package`
+- `ament_cmake_version`
+
+Version of package(s) in repository `ament_cmake`:
+
+- upstream repository: https://github.com/ament/ament_cmake.git
+- release repository: https://github.com/revyos-ros/ament_cmake-release.git
+- rosdistro version: `1.3.9-1`
+- old version: `1.3.8-2`
+- new version: `1.3.9-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## ament_cmake (humble) - 1.3.8-2
 
 The packages in the `ament_cmake` repository were released into the `humble` distro by running `/home/z572/gits/revyos-ros/venv/bin/bloom-release -r humble ament_cmake` on `Sun, 28 Apr 2024 02:43:49 -0000`
