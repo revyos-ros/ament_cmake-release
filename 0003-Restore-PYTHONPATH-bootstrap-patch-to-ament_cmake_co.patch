@@ -1,4 +1,4 @@
-From 3f7f3ca94154442c18e012a2432b99674efe0018 Mon Sep 17 00:00:00 2001
+From 16471c0e35ab4053444b05c03b5b76ebb173dc13 Mon Sep 17 00:00:00 2001
 From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 Date: Sun, 28 Apr 2024 10:37:38 +0800
 Subject: [PATCH 3/3] Restore PYTHONPATH bootstrap patch to ament_cmake_core.
@@ -8,7 +8,7 @@ Subject: [PATCH 3/3] Restore PYTHONPATH bootstrap patch to ament_cmake_core.
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/debian/rules.em b/debian/rules.em
-index 4373e9a30..f6ca8e0e2 100755
+index 209b90656..a53914471 100755
 --- a/debian/rules.em
 +++ b/debian/rules.em
 @@ -24,7 +24,7 @@ endif
