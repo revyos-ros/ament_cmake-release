@@ -1,0 +1,26 @@
+From 90467037b6316fdcc14e89e203606b716f451672 Mon Sep 17 00:00:00 2001
+From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
+Date: Tue, 11 Jun 2024 13:00:37 +0800
+Subject: [PATCH 2/2] add python3.11 pythonpath
+
+debian bookworm default python3 is 3.11
+---
+ debian/rules.em | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/debian/rules.em b/debian/rules.em
+index cacc1d4c5..a53914471 100755
+--- a/debian/rules.em
++++ b/debian/rules.em
+@@ -24,7 +24,7 @@ endif
+ DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+ 
+ # Needed to bootstrap since the ros_workspace package does not yet exist.
+-export PYTHONPATH=@(InstallationPrefix)/lib/python3.12/site-packages
++export PYTHONPATH=@(InstallationPrefix)/lib/python3.12/site-packages:@(InstallationPrefix)/lib/python3.11/site-packages
+ 
+ %:
+ 	dh $@@ -v --buildsystem=cmake --builddirectory=.obj-$(DEB_HOST_GNU_TYPE)
+-- 
+2.41.0
+
