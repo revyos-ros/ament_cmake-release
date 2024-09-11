@@ -43,7 +43,7 @@
 #
 
 macro(ament_auto_package)
-  cmake_parse_arguments(_ARG "INSTALL_TO_PATH" "" "INSTALL_TO_SHARE" ${ARGN})
+  cmake_parse_arguments(_ARG_AMENT_AUTO_PACKAGE "INSTALL_TO_PATH" "" "INSTALL_TO_SHARE" ${ARGN})
   # passing all unparsed arguments to ament_package()
 
   # export all found build dependencies which are also run dependencies
@@ -67,17 +67,9 @@ macro(ament_auto_package)
 
   # export and install all libraries
   if(NOT ${PROJECT_NAME}_LIBRARIES STREQUAL "")
-    set(without_interfaces "")
-    foreach(library_name ${${PROJECT_NAME}_LIBRARIES})
-      get_target_property(library_type ${library_name} TYPE)
-      if(NOT "${library_type}" STREQUAL "INTERFACE_LIBRARY")
-        list(APPEND without_interfaces ${library_name})
-      endif()
-    endforeach()
-
-    ament_export_libraries(${without_interfaces})
+    ament_export_libraries(${${PROJECT_NAME}_LIBRARIES})
     install(
-      TARGETS ${without_interfaces}
+      TARGETS ${${PROJECT_NAME}_LIBRARIES}
       ARCHIVE DESTINATION lib
       LIBRARY DESTINATION lib
       RUNTIME DESTINATION bin
@@ -86,7 +78,7 @@ macro(ament_auto_package)
 
   # install all executables
   if(NOT ${PROJECT_NAME}_EXECUTABLES STREQUAL "")
-    if(_ARG_INSTALL_TO_PATH)
+    if(_ARG_AMENT_AUTO_PACKAGE_INSTALL_TO_PATH)
       set(_destination "bin")
     else()
       set(_destination "lib/${PROJECT_NAME}")
@@ -98,7 +90,7 @@ macro(ament_auto_package)
   endif()
 
   # install directories to share
-  foreach(_dir ${_ARG_INSTALL_TO_SHARE})
+  foreach(_dir ${_ARG_AMENT_AUTO_PACKAGE_INSTALL_TO_SHARE})
     install(
       DIRECTORY "${_dir}"
       DESTINATION "share/${PROJECT_NAME}"
@@ -107,5 +99,5 @@ macro(ament_auto_package)
 
   ament_execute_extensions(ament_auto_package)
 
-  ament_package(${_ARG_UNPARSED_ARGUMENTS})
+  ament_package(${_ARG_AMENT_AUTO_PACKAGE_UNPARSED_ARGUMENTS})
 endmacro()
