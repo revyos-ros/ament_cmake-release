@@ -1,4 +1,4 @@
-From 72f19a2695ab04e926946c0e4c23f834dcb858df Mon Sep 17 00:00:00 2001
+From 08e1ebd953d073d1d4a1c243ce85796f4729e1d0 Mon Sep 17 00:00:00 2001
 From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 Date: Tue, 11 Jun 2024 13:00:37 +0800
 Subject: [PATCH 2/2] add python3.11 pythonpath
@@ -22,5 +22,5 @@ index cacc1d4c5..a53914471 100755
  %:
  	dh $@@ -v --buildsystem=cmake --builddirectory=.obj-$(DEB_HOST_GNU_TYPE)
 -- 
-2.41.0
+2.45.2
 
