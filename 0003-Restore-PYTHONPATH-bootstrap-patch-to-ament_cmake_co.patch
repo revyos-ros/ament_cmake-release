@@ -1,4 +1,4 @@
-From e1e6f52c67884ab400d4731ead02eb31305b83c1 Mon Sep 17 00:00:00 2001
+From c816f598029687cc9e30d305cbce5884ded198a3 Mon Sep 17 00:00:00 2001
 From: Zheng Junjie <zhengjunjie@iscas.ac.cn>
 Date: Sun, 28 Apr 2024 10:37:38 +0800
 Subject: [PATCH 3/3] Restore PYTHONPATH bootstrap patch to ament_cmake_core.
